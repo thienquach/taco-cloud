@@ -23,7 +23,7 @@ public class IngredientEditor extends PropertyEditorSupport{
 		if (StringUtils.isEmpty(text)) {
             setValue(null);
         }else {
-        	setValue(ingredientRepository.findOne(text));
+        	setValue(ingredientRepository.findById(text));
         }
 	}
 }

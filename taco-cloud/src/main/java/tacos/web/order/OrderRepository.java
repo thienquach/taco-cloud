@@ -1,6 +1,12 @@
 package tacos.web.order;
 
-public interface OrderRepository {
+import java.util.Date;
+import java.util.List;
 
-	Order save(Order order);
+import org.springframework.data.repository.CrudRepository;
+
+public interface OrderRepository extends CrudRepository<Order, Long> {
+
+	List<Order> findByDeliveryZip(String deliveryZip);
+	List<Order> findByDeliveryZipAndPlacedAtBetween(String deliveryZip, Date startDate, Date endDate);
 }
