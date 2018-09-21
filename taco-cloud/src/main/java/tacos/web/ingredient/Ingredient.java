@@ -1,4 +1,4 @@
-package tacos.web;
+package tacos.web.ingredient;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
